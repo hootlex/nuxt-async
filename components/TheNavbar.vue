@@ -2,7 +2,7 @@
   <nav class="nav">
     <div class="logo">
       <nuxt-link :to="{name: 'index'}" class="logo text-lg">
-        Nuxt Fundamentals
+        Nuxt Async
       </nuxt-link>
 
       <span class="subheader">A Vue School course</span>

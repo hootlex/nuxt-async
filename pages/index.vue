@@ -3,7 +3,7 @@
     <div>
       <logo/>
       <h1 class="title">
-        nuxt-fundamentals
+        nuxt-async
       </h1>
       <h2 class="subtitle">
         My gnarly Nuxt.js project
@@ -33,16 +33,11 @@ export default {
     return {
       title: 'Home Page 🍕',
       meta: [
-        { name: 'twitter:title', content: 'Nuxt Fundamentals by Vue School'},
+        { name: 'twitter:title', content: 'Nuxt Async by Vue School'},
         { name: 'twitter:description', content: 'Nuxt + Vue School = 🍕'},
         { name: 'twitter:image', content: 'https://i.imgur.com/UYP2umJ.png'},
         { name: 'twitter:card', content: 'summary_large_image'}
       ]
-    }
-  },
-  computed: {
-    posts () {
-      return this.$store.state.posts.all
     }
   }
 }
@@ -71,5 +66,8 @@ export default {
 }
 .links {
   padding-top: 15px;
+}
+.links > .button--grey {
+  margin: 5px;
 }
 </style>

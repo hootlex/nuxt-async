@@ -41,16 +41,9 @@ export default {
       ]
     }
   },
-  data () {
-    return {
-      posts: null
-    }
-  },
-  mounted () {
-    axios.get('https://jsonplaceholder.typicode.com/posts')
-      .then(response => {
-        this.posts = response.data
-      })
+  async asyncData (context) {
+    let response = await axios.get('https://jsonplaceholder.typicode.com/posts')
+    return {posts: response.data}
   }
 }
 </script>

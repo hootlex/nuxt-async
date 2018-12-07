@@ -41,9 +41,13 @@ export default {
       ]
     }
   },
-  async asyncData ({app}) {
-    let posts = await app.$axios.$get('posts')
-    return {posts}
+  async fetch ({store}) {
+    await store.dispatch('posts/fetchAllPosts')
+  },
+  computed: {
+    posts () {
+      return this.$store.state.posts.all
+    }
   }
 }
 </script>

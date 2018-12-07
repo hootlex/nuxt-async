@@ -7,9 +7,12 @@ export const actions = {
     let posts = await this.$axios.$get('posts')
     commit('setPosts', posts)
   },
-  async fetchPost ({commit}, id) {
-    let post = await this.$axios.$get(`posts/${id}`)
-    commit('setPost', post)
+  async fetchPost ({commit, state}, id) {
+    let existingPost = state.all.find(post => post.id === id)
+    if (!existingPost) {
+      let post = await this.$axios.$get(`posts/${id}`)
+      commit('setPost', post)
+    }
   }
 }
 

@@ -51,6 +51,10 @@ module.exports = {
     '@nuxtjs/axios'
   ],
 
+  axios: {
+    baseURL: 'https://jsonplaceholder.typicode.com'
+  },
+
   /*
   ** Build configuration
   */

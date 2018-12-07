@@ -42,7 +42,7 @@ export default {
     }
   },
   async asyncData ({app}) {
-    let posts = await app.$axios.$get('https://jsonplaceholder.typicode.com/posts')
+    let posts = await app.$axios.$get('posts')
     return {posts}
   }
 }

@@ -41,9 +41,9 @@ export default {
       ]
     }
   },
-  async asyncData (context) {
-    let response = await axios.get('https://jsonplaceholder.typicode.com/posts')
-    return {posts: response.data}
+  async asyncData ({app}) {
+    let posts = await app.$axios.$get('https://jsonplaceholder.typicode.com/posts')
+    return {posts}
   }
 }
 </script>
